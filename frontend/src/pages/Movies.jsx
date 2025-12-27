@@ -17,7 +17,7 @@ export default function Movies() {
     <div className="p-4 bg-black min-h-screen text-white">
       <h1 className="text-xl font-semibold mb-4">Movies</h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-12">
         {movies.map(movie => (
           <Link
             key={movie.id}

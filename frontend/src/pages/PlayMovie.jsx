@@ -6,15 +6,23 @@ export default function PlayMovie() {
   const { id } = useParams();
 
   return (
-    <div className="w-screen h-screen bg-black">
+    <div className="fixed inset-0 bg-black flex items-center justify-center">
       <video
         key={id}
         src={`${API}/movies/${id}/stream`}
         controls
         autoPlay
         playsInline
-        className="w-full h-full"
-      />
+        className="
+          w-full h-full
+          max-w-none
+          bg-black
+          outline-none
+        "
+      >
+        <source src={`${API}/movies/${id}/stream`} type="video/mp4" />
+        {/* subtitles will go here later */}
+      </video>
     </div>
   );
 }
